@@ -3,53 +3,53 @@ padding: 0%;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 box-sizing: border-box ;}
 body{
-    background: bisque;
-    color: whitesmoke;
+    background: royalblue;
+    color: white;
 }
 .container{
-    margin: 12%;;
+    margin: 10%;;
     width: 90%;
     max-width: 700px;
 }
 .display{
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 50px;
-    background: honeydew;
-    color: beige;
+    margin-bottom: 60px;
+    background-color: white;
+    color: 333;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 26px 20px;
     border-radius: 5px;
 }
-.container p1{
-    font-size: small;
+ h1{
+    font-size:100px;
     font-weight: 200;   
 }
 
-.container p1 span{
-    color: darkkhaki;
-    border-bottom: 4px;
-    padding-bottom: 5px;
+ h1 span{
+    color:whitesmoke;
+    border-bottom: 10px;
+    padding-bottom:13px;
 }
 
-.display input{
-    border: 0;
-    outline: auto;
+ input{
+    border: 100;
+    outline: 10px;
     font-size: medium;
      
 }
-.container button img{
+ button img{
     width: 30px;
-    margin-right: auto;
+    margin-right: 20px;
     font-size: medium;
     border: 50px;
 }
-.container button{
-    border:0px;
+button{
+    border:10px;
     outline: 20px;
-    background:burlywood ;
+   background-color: aquamarine;
     font-size: medium;
     font-weight: 300;
     display: flex;
@@ -58,4 +58,8 @@ body{
     padding: 16px 26px;
     border-radius: 5px;
     cursor: pointer;
+}
+.copy{
+    border: 10px;
+    margin-top: 20px; 
 }
