@@ -44,12 +44,12 @@ body{
     width: 30px;
     margin-right: 20px;
     font-size: medium;
-    border: 50px;
-}
+    border: 100px;
+}  
 button{
     border:10px;
     outline: 20px;
-   background-color: aquamarine;
+   background-color: tan;
     font-size: medium;
     font-weight: 300;
     display: flex;
