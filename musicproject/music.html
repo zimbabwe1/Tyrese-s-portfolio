@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.1.2/Tone.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.35.0/ace.js" ></script>
+        <script src="https://unpkg.com/tone"></script>
+        <style>
+            #editor {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            html, body {
+                height:calc(100% - 40px);
+                width: 100%;
+            }
+            #no {
+                border:  solid black 1px;
+                border-radius: 20px;
+                text-align: center;
+                line-height: 30px;
+                width: 100px;
+                height: 30px;
+                margin: 5px;
+            }
+            #drum {
+                border:  solid black 1px;
+                border-radius: 20px;
+                text-align: center;
+                line-height: 30px;
+                width: 100px;
+                height: 30px;
+                margin: 5px;
+            }
+            
+            #no:hover {
+                background: #ccc;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="editor"></div>
+        <div id="no" onclick="s1()" >noise</div>
+        <div id="drum" onclick="drum()" >gong</div>
+        <script>
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/monokai");
+            editor.session.setMode("ace/mode/javascript");
+            editor.setOptions({
+                fontSize: "20px"
+            });
+           var vol = new Tone.Volume(-12).toMaster();
+            var polySynth = new Tone.PolySynth(Tone.FMSynth).connect(vol);
+            var p2 = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").toDestination();
+            var s2 = new Tone.player("https://tonejs.github.io/audio/berklee/gurgling_theremin_1.mp3").toDestination();
+            p2.connect(vol);
+            s2.connect(vol);
+            function drum() {
+                // Trigger the sound
+                Tone.start();
+                //polySynth.triggerAttackRelease("C4", "8n");
+                p2.start();
+            }
+            function s1() {
+                // Trigger the sound
+                Tone.start();
+                s2.start();
+            }
+        </script>
+    </body>
+</html> 
